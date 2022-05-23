@@ -1,20 +1,27 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Item = (item) => {
-          const { name, img } = item;
+const Item = ({ item, setPurchased }) => {
+          const { id, name, description, quantityMin, quantity, img } = item;
+          const navigate = useNavigate();
+          const navigateToPurchased = (id) => {
+                    navigate(`/purchase/${id}`);
+          }
           return (
                     <div>
-                              <div class="card w-96 bg-base-100 shadow-xl">
-                                        <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-                                        <div class="card-body">
-                                                  <h2 class="card-title">Shoes!</h2>
-                                                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                  <div class="card-actions justify-end">
-                                                            <button class="btn btn-primary">Buy Now</button>
+                              <div class="card lg:max-w-lg bg-base-100 shadow-xl">
+                                        <figure><img src={img} alt="Shoes" /></figure>
+                                        <div class="card-body ">
+                                                  <h2 class="card-title justify-center">{name}</h2>
+                                                  <p>{description}</p>
+                                                  <p>Minimum Quantity: {quantityMin}</p>
+                                                  <p>Quantity: {quantity}</p>
+                                                  <div class="card-actions justify-center">
+                                                            <button onClick={() => navigateToPurchased(id)} className='btn btn-success'>Purchase</button>
                                                   </div>
                                         </div>
                               </div>
-                    </div>
+                    </div >
           );
 };
 

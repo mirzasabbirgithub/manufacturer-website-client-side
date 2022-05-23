@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "New1",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    },
+    {
+        "id": 2,
+        "name": "New2",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    },
+    {
+        "id": 3,
+        "name": "New3",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    },
+    {
+        "id": 4,
+        "name": "New4",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    },
+    {
+        "id": 5,
+        "name": "New5",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    },
+    {
+        "id": 6,
+        "name": "New6",
+        "description": "Good one!",
+        "quantityMin": 24,
+        "quantity": 5,
+        "price": 1000,
+        "img": "https://cdn.pixabay.com/photo/2012/04/13/21/06/screwdriver-33634__480.png"
+    }
+]
