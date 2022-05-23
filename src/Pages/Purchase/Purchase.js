@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Purchase = () => {
           const { id } = useParams();
           const [item, setItem] = useState({});
+          const [user] = useAuthState(auth);
 
           useEffect(() => {
                     const url = `http://localhost:5000/item/${id}`;
@@ -12,9 +15,12 @@ const Purchase = () => {
                               .then(data => setItem(data));
           }, []);
 
+
+
           return (
                     <>
-
+                              <h2 className='text-2xl'>Customer Name: {user.displayName}</h2>
+                              <h2>Customer Email: {user.email}</h2>
                               <div className='grid grid-cols-6 gap-4 my-10 mx-10'>
 
                                         <div class="card lg:max-w-lg bg-base-100 shadow-xl ">
