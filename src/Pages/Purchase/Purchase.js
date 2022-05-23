@@ -5,7 +5,7 @@ const Purchase = () => {
           const { id } = useParams();
           return (
                     <div>
-                              <h1>Purchase Page : {id}</h1>
+                              <h1 className='text-3xl'>Purchase Page : {id}</h1>
                     </div>
           );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Item = ({ item, setPurchased }) => {
-          const { id, name, description, quantityMin, quantity, img } = item;
+const Item = ({ item }) => {
+          const { _id, name, description, quantityMin, quantity, img } = item;
           const navigate = useNavigate();
-          const navigateToPurchased = (id) => {
-                    navigate(`/purchase/${id}`);
+          const navigateToPurchased = (_id) => {
+                    navigate(`/purchase/${_id}`);
           }
           return (
                     <div>
@@ -17,7 +17,7 @@ const Item = ({ item, setPurchased }) => {
                                                   <p>Minimum Quantity: {quantityMin}</p>
                                                   <p>Quantity: {quantity}</p>
                                                   <div class="card-actions justify-center">
-                                                            <button onClick={() => navigateToPurchased(id)} className='btn btn-success'>Purchase</button>
+                                                            <button onClick={() => navigateToPurchased(_id)} className='btn btn-success'>Purchase</button>
                                                   </div>
                                         </div>
                               </div>
