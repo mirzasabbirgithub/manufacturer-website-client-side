@@ -17,7 +17,6 @@ const Navbar = () => {
                     <li><Link to="/myportfolio">My Portfolio</Link></li>
                     <li><Link to="/blogs">Blogs</Link></li>
                     <li><Link to="/dashboard">Dashboard</Link></li>
-                    <li><Link to="/purchase">Purchase</Link></li>
                     <li>{user ? < button className="btn btn-primary" onClick={signout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
           </>
           return (
