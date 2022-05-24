@@ -49,12 +49,12 @@ const Purchase = () => {
           return (
                     <>
 
-                              <div class="flex flex-col w-full border-opacity-50">
-                                        <div class="grid h-100 card bg-base-100 rounded-box place-items-center">
-                                                  <div class="card lg:max-w-lg bg-base-100 shadow-xl ">
+                              <div className="flex flex-col w-full border-opacity-50">
+                                        <div className="grid h-100 card bg-base-100 rounded-box place-items-center">
+                                                  <div className="card lg:max-w-lg bg-base-100 shadow-xl ">
                                                             <h2 className='text-3xl my-5'>Selected Product Detials</h2>
                                                             <figure><img src={item.img} alt="Shoes" /></figure>
-                                                            <div class="card-body ">
+                                                            <div className="card-body ">
                                                                       <h2 class="card-title justify-center">{item.name}</h2>
                                                                       <p>{item.description}</p>
                                                                       <p>Minimum Order: {item.minOrder}</p>
@@ -62,8 +62,8 @@ const Purchase = () => {
                                                             </div>
                                                   </div>
                                         </div>
-                                        <div class="divider">Next</div>
-                                        <div class="grid h-100 card bg-base-100 rounded-box place-items-center mb-5">
+                                        <div className="divider">Next</div>
+                                        <div className="grid h-100 card bg-base-100 rounded-box place-items-center mb-5">
                                                   <h1 className='text-2xl'>Information Box</h1>
                                                   <form onSubmit={handlePurchased} className='grid grid-cols-1 gap-1 '>
                                                             <label>Name</label>
