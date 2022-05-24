@@ -6,7 +6,7 @@ const Review = ({ review }) => {
                     <div class="card lg:max-w-lg bg-base-100 shadow-xl">
                               <div class="card-body bg-accent-focus text-white">
                                         <h2 class="card-title justify-center">{name}</h2>
-                                        <p>Ratings:{ratings}</p>
+                                        <p>Ratings: {ratings} out of 5</p>
                                         <p>{description}</p>
                               </div>
                     </div>

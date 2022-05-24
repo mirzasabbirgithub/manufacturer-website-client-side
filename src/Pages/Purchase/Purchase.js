@@ -48,24 +48,24 @@ const Purchase = () => {
 
           return (
                     <>
-                              <h2 className='text-2xl'>Customer Name: {user.displayName}</h2>
-                              <h2>Customer Email: {user.email}</h2>
-                              <div className='grid grid-cols-6 gap-4 my-10 mx-10'>
 
-                                        <div class="card lg:max-w-lg bg-base-100 shadow-xl ">
-                                                  <h2 className='text-3xl my-5'>Selected Product Detials</h2>
-                                                  <figure><img src={item.img} alt="Shoes" /></figure>
-                                                  <div class="card-body ">
-                                                            <h2 class="card-title justify-center">{item.name}</h2>
-                                                            <p>{item.description}</p>
-                                                            <p>Minimum Order: {item.minOrder}</p>
-                                                            <p>Quantity: {item.quantity}</p>
+                              <div class="flex flex-col w-full border-opacity-50">
+                                        <div class="grid h-100 card bg-base-100 rounded-box place-items-center">
+                                                  <div class="card lg:max-w-lg bg-base-100 shadow-xl ">
+                                                            <h2 className='text-3xl my-5'>Selected Product Detials</h2>
+                                                            <figure><img src={item.img} alt="Shoes" /></figure>
+                                                            <div class="card-body ">
+                                                                      <h2 class="card-title justify-center">{item.name}</h2>
+                                                                      <p>{item.description}</p>
+                                                                      <p>Minimum Order: {item.minOrder}</p>
+                                                                      <p>Quantity: {item.quantity}</p>
+                                                            </div>
                                                   </div>
                                         </div>
-
-                                        <div className='mx-10'>
+                                        <div class="divider">Next</div>
+                                        <div class="grid h-100 card bg-base-100 rounded-box place-items-center mb-5">
                                                   <h1 className='text-2xl'>Information Box</h1>
-                                                  <form onSubmit={handlePurchased} className='grid grid-cols-1 gap-1 justify-items-center mt-2'>
+                                                  <form onSubmit={handlePurchased} className='grid grid-cols-1 gap-1 '>
                                                             <label>Name</label>
                                                             <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
                                                             <label>Email</label>
@@ -79,8 +79,15 @@ const Purchase = () => {
                                                             <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                                                             <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
                                                   </form>
+
                                         </div>
                               </div>
+
+
+
+
+
+
 
 
                     </>

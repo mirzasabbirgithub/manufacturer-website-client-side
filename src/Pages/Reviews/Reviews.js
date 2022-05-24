@@ -13,11 +13,11 @@ const Reviews = () => {
           return (
                     <>
                               <div>
-                                        <h1 className='text-5xl my-2'>Review Section</h1>
+                                        <h1 className='text-3xl my-2 text text-fuchsia-600'>Review Section</h1>
                                         <h1 className='text-2xl my-2'>Total Reviews : {reviews.length}</h1>
                               </div>
 
-                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
                                         {
                                                   reviews.map(review => <Review
                                                             key={review._id}
