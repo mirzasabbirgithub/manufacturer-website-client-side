@@ -23,9 +23,9 @@ const MyPurchased = () => {
                                                             <tr>
                                                                       <th></th>
                                                                       <th>Product Name</th>
-                                                                      <th>User Name</th>
-                                                                      <th>User Email</th>
                                                                       <th>Quantity</th>
+                                                                      <th>Payment</th>
+                                                                      <th>Action</th>
                                                             </tr>
                                                   </thead>
                                                   <tbody>
@@ -33,9 +33,9 @@ const MyPurchased = () => {
                                                                       purchase.map((p, index) => <tr>
                                                                                 <th>{index + 1}</th>
                                                                                 <td>{p.productName}</td>
-                                                                                <td>{p.userName}</td>
-                                                                                <td>{p.email}</td>
                                                                                 <td>{p.quantity}</td>
+                                                                                <td><button className="btn btn-primary text-white">Please Pay</button></td>
+                                                                                <td><button className="btn btn-danger text-white">Delete</button></td>
                                                                       </tr>)
                                                             }
 

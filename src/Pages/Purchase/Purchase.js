@@ -42,6 +42,7 @@ const Purchase = () => {
                               .then(res => res.json())
                               .then(data => {
                                         toast.success(`Purchased is complete for ${item.name}`)
+                                        window.location.reload();
                               });
           }
 
