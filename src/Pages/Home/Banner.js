@@ -2,14 +2,22 @@ import React from 'react';
 import screwdriver1 from '../../img/screwdriver1.jpg'
 const Banner = () => {
           return (
-                    <div class="card lg:card-side bg-base-100 shadow-xl">
-                              <figure><img src={screwdriver1} alt="screwdiver"></img></figure>
-                              <div class="card-body">
-                                        <h2 class="card-title text-5xl justify-center text-blue-500">Welcome to Scredriver Zone</h2>
-                                        <p className="text-2xl justify-center ">A screwdriver is a very essential tool used to install and remove. Due to the high speed capability, we'll get that you get tasks complete much faster.</p>
 
+                    <>
+                              <div style={{
+                                        background: `url(${screwdriver1})`,
+                                        backgroundSize: 'cover'
+                              }} class="hero max-h-screen">
+                                        <div class="hero-overlay bg-opacity-60"></div>
+                                        <div class="hero-content text-center text-neutral-content">
+                                                  <div class="max-w-md">
+                                                            <h1 class="mb-5 text-5xl font-bold">Welcome to Scredriver Zone</h1>
+                                                            <p class="mb-5">A screwdriver is a very essential tool used to install and remove. Due to the high speed capability, we'll get that you get tasks complete much faster</p>
+                                                  </div>
+                                        </div>
                               </div>
-                    </div>
+
+                    </>
           );
 };
 
