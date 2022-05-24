@@ -12,7 +12,10 @@ import Register from './Pages/Login/Register';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Purchase from './Pages/Purchase/Purchase';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import MyPurchased from './Pages/Purchase/MyPurchased';
+import AddReviews from './Pages/Dashboard/AddReviews';
 function App() {
   return (
     <div className="App">
@@ -23,13 +26,18 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/myportfolio" element={<Portfolio></Portfolio>}></Route>
-        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}></Route>
+        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+          <Route index element={<MyPurchased></MyPurchased>}></Route>
+          <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
+
+        </Route>
+
         <Route path="/purchase/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
-
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
