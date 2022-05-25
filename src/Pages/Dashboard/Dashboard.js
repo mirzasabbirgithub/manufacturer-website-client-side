@@ -17,14 +17,17 @@ const Dashboard = () => {
                               <div class="drawer-side">
                                         <label for="dashboard-sidebar" class="drawer-overlay"></label>
                                         <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
-                                                  <li><Link to="/dashboard">Purchase Items</Link></li>
+                                                  {!admin && < li > <Link to="/dashboard">Purchase Items</Link></li>}
+
                                                   <li><Link to="/dashboard/addreviews">Add A Reviews</Link></li>
                                                   <li><Link to="/dashboard/myprofile">My Profile</Link></li>
                                                   {admin && <li><Link to="/dashboard/user">All Users</Link></li>}
+                                                  {admin && <li><Link to="/dashboard/addproduct">Add A Product</Link></li>}
+                                                  {admin && <li><Link to="/dashboard/manageproduct">Manage Products</Link></li>}
                                         </ul>
 
                               </div>
-                    </div>
+                    </div >
           );
 };
 
