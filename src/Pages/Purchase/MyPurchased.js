@@ -5,9 +5,15 @@ import auth from '../../firebase.init';
 const MyPurchased = () => {
           const [purchase, setPurchase] = useState([]);
           const [user] = useAuthState(auth);
+
           useEffect(() => {
                     if (user) {
-                              fetch(`http://localhost:5000/purchased?userEmail=${user.email}`)
+                              fetch(`http://localhost:5000/purchased?userEmail=${user.email}`, {
+                                        method: 'GET',
+                                        headers: {
+                                                  'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                                        }
+                              })
                                         .then(res => res.json())
                                         .then(data => setPurchase(data));
                     }

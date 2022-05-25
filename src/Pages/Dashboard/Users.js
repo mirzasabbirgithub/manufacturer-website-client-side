@@ -23,6 +23,7 @@ const Users = () => {
                                                             <tr>
                                                                       <th>Index</th>
                                                                       <th>Email</th>
+                                                                      <th>Rules</th>
                                                                       <th>Action</th>
                                                             </tr>
                                                   </thead>

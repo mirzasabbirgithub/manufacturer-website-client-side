@@ -18,6 +18,7 @@ import MyPurchased from './Pages/Purchase/MyPurchased';
 import AddReviews from './Pages/Dashboard/AddReviews';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 function App() {
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
           <Route index element={<MyPurchased></MyPurchased>}></Route>
           <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="user" element={<Users></Users>}></Route>
+          <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
 
         </Route>
 
