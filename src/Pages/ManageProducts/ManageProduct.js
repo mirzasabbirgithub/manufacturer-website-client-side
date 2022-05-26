@@ -17,7 +17,7 @@ const ManageProduct = () => {
 
 
           const handleDelete = id => {
-                    const proceed = window.confirm('Are you sure to detele the item?');
+                    const proceed = window.confirm('Are you sure to detele the product?');
                     if (proceed) {
                               console.log(id);
                               const url = `http://localhost:5000/item/${id}`;

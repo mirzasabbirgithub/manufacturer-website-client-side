@@ -18,7 +18,6 @@ const Users = () => {
           const deleteUser = id => {
                     const proceed = window.confirm('Are you sure to detele the item?');
                     if (proceed) {
-                              console.log(id);
                               const url = `http://localhost:5000/user/${id}`;
                               fetch(url, {
                                         method: 'DELETE'

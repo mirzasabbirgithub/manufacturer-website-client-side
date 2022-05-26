@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyPurchased = () => {
@@ -19,6 +20,25 @@ const MyPurchased = () => {
                     }
           }, [user])
 
+
+          const deletePurchased = id => {
+                    const proceed = window.confirm('Are you sure to cencel the item?');
+                    if (proceed) {
+                              console.log(id);
+                              const url = `http://localhost:5000/purchased/${id}`;
+                              fetch(url, {
+                                        method: 'DELETE'
+                              })
+                                        .then(res => res.json())
+                                        .then(data => {
+                                                  console.log(data);
+                                                  const remainingUser = purchase.filter(item => item._id !== id);
+                                                  setPurchase(remainingUser);
+                                        })
+                    }
+          }
+
+
           return (
 
                     <div>
@@ -30,8 +50,9 @@ const MyPurchased = () => {
                                                                       <th></th>
                                                                       <th>Product Name</th>
                                                                       <th>Quantity</th>
+                                                                      <th>Price</th>
                                                                       <th>Payment</th>
-                                                                      <th>Action</th>
+                                                                      {/* <th>Action</th> */}
                                                             </tr>
                                                   </thead>
                                                   <tbody>
@@ -40,8 +61,18 @@ const MyPurchased = () => {
                                                                                 <th>{index + 1}</th>
                                                                                 <td>{p.productName}</td>
                                                                                 <td>{p.quantity}</td>
-                                                                                <td><button className="btn btn-primary text-white">Please Pay</button></td>
-                                                                                <td><button className="btn btn-danger text-white">Delete</button></td>
+                                                                                <td>${p.price}</td>
+                                                                                <td>
+                                                                                          {(p.price && !p.paid) && <div> <Link to={`/dashboard/payment/${p._id}`}><button className='btn btn-xs btn-success'>Please Pay</button></Link>
+                                                                                                    <p><button onClick={() => deletePurchased(p._id)} className="btn btn-xs btn-success">Cancel</button></p>
+                                                                                          </div>}
+                                                                                          {(p.price && p.paid) && <div>
+                                                                                                    <p><span className='btn btn-xs btn-success'>Paid</span></p>
+                                                                                                    <p>Transaction ID: <span className='text-orange-600'>{p.transactionId}</span></p>
+                                                                                          </div>}
+
+                                                                                </td>
+
                                                                       </tr>)
                                                             }
 

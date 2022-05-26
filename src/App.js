@@ -21,6 +21,8 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProducts/ManageProduct';
+import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
+import Payment from './Pages/Payment/Payment';
 function App() {
   return (
     <div className="App">
@@ -35,11 +37,11 @@ function App() {
           <Route index element={<MyPurchased></MyPurchased>}></Route>
           <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
           <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addproduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path="manageproduct" element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
         </Route>
-
         <Route path="/purchase/:id" element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
