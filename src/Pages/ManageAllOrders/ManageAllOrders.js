@@ -45,6 +45,7 @@ const ManageAllOrders = () => {
                                                                       <th>Order By</th>
                                                                       <th>Price</th>
                                                                       <th>Action</th>
+                                                                      <th>Status</th>
                                                             </tr>
                                                   </thead>
                                                   <tbody>
@@ -55,6 +56,15 @@ const ManageAllOrders = () => {
                                                                                 <td>{i.userName}</td>
                                                                                 <td>${i.price}</td>
                                                                                 <td><button onClick={() => handleDelete(i._id)} className="btn btn-danger text-white">Delete</button></td>
+                                                                                <td>
+
+                                                                                          {(!i.paid) && <div> <button className='btn btn-xs btn-success'>Unpaid</button> </div>}
+
+                                                                                          {(i.paid) && <div>
+                                                                                                    <p><span className='btn btn-xs btn-success'>Pending</span></p>
+                                                                                          </div>}
+
+                                                                                </td>
                                                                       </tr>)
                                                             }
 
