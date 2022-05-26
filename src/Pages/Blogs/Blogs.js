@@ -22,7 +22,7 @@ const Blogs = () => {
 
                                         <div>
                                                   <h1 className='text-3xl text-green-600'>You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h1>
-                                                  <p>array of products means object will be once, then
+                                                  <p>Array of products means object will be once, then
                                                             products = [
                                                             “name: “abc”,
                                                             type: “abc”

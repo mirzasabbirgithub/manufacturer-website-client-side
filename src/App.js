@@ -21,7 +21,6 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import ManageProduct from './Pages/ManageProducts/ManageProduct';
-import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
 import Payment from './Pages/Payment/Payment';
 function App() {
   return (

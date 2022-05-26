@@ -10,8 +10,6 @@ const Purchase = () => {
           const [user] = useAuthState(auth);
           const [error, setError] = useState(false);
 
-          // const [quantity, setQuantity] = useState({ quantity: "" })
-
           useEffect(() => {
                     const url = `http://localhost:5000/item/${id}`;
                     fetch(url)
@@ -19,15 +17,7 @@ const Purchase = () => {
                               .then(data => setItem(data));
           }, []);
 
-
-          // const handleOnchange = (e) => {
-          //           setQuantity(e.target.value);
-          //           console.log(quantity)
-          //           if (quantity < item.minOrder && quantity > item.Quantity) {
-          //                     setError(true);
-          //           }
-
-          // }
+          console.log(item);
 
           const handlePurchased = event => {
                     event.preventDefault();
