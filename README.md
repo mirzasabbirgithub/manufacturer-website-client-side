@@ -1,3 +1,15 @@
+## Site Name: Screwdriver Site
+## Live Site Link: https://screwdriver-site.web.app
+
+## Features and Functionality,
+* Login System
+* Different dashboard for admin and client
+* Purchase and Payment gateway
+* Manipulate product (Add, Update, Delete)
+* Fully responsive
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
