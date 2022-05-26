@@ -9,11 +9,9 @@ const MyPurchased = () => {
 
           useEffect(() => {
                     if (user) {
-                              fetch(`http://localhost:5000/purchased?userEmail=${user.email}`, {
+                              fetch(`https://fierce-ocean-49278.herokuapp.com/purchased?userEmail=${user.email}`, {
                                         method: 'GET',
-                                        headers: {
-                                                  'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                                        }
+
                               })
                                         .then(res => res.json())
                                         .then(data => setPurchase(data));
@@ -25,7 +23,7 @@ const MyPurchased = () => {
                     const proceed = window.confirm('Are you sure to cencel the item?');
                     if (proceed) {
                               console.log(id);
-                              const url = `http://localhost:5000/purchased/${id}`;
+                              const url = `https://fierce-ocean-49278.herokuapp.com/purchased/${id}`;
                               fetch(url, {
                                         method: 'DELETE'
                               })
@@ -52,7 +50,7 @@ const MyPurchased = () => {
                                                                       <th>Quantity</th>
                                                                       <th>Price</th>
                                                                       <th>Payment</th>
-                                                                      {/* <th>Action</th> */}
+
                                                             </tr>
                                                   </thead>
                                                   <tbody>

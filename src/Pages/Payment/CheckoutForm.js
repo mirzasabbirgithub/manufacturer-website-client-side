@@ -13,7 +13,7 @@ const CheckoutForm = ({ purchased }) => {
           const { _id, price, userName, email } = purchased;
 
           useEffect(() => {
-                    fetch('http://localhost:5000/create-payment-intent', {
+                    fetch('https://fierce-ocean-49278.herokuapp.com/create-payment-intent', {
                               method: 'POST',
                               headers: {
                                         'content-type': 'application/json',
@@ -82,7 +82,7 @@ const CheckoutForm = ({ purchased }) => {
                                         transactionId: paymentIntent.id
                               }
 
-                              fetch(`http://localhost:5000/purchased/${_id}`, {
+                              fetch(`https://fierce-ocean-49278.herokuapp.com/purchased/${_id}`, {
                                         method: 'PATCH',
                                         headers: {
                                                   'content-type': 'application/json',

@@ -11,7 +11,7 @@ const Purchase = () => {
           const [error, setError] = useState(false);
 
           useEffect(() => {
-                    const url = `http://localhost:5000/item/${id}`;
+                    const url = `https://fierce-ocean-49278.herokuapp.com/item/${id}`;
                     fetch(url)
                               .then(res => res.json())
                               .then(data => setItem(data));
@@ -45,7 +45,7 @@ const Purchase = () => {
                                         phone: phone,
                               }
 
-                              fetch('http://localhost:5000/purchased', {
+                              fetch('https://fierce-ocean-49278.herokuapp.com/purchased', {
                                         method: 'POST',
                                         headers: {
                                                   'content-type': 'application/json'

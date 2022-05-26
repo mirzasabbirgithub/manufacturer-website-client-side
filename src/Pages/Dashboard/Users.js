@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 
 const Users = () => {
-          const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+          const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fierce-ocean-49278.herokuapp.com/user', {
                     method: 'GET',
                     headers: {
                               authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -18,7 +18,7 @@ const Users = () => {
           const deleteUser = id => {
                     const proceed = window.confirm('Are you sure to detele the item?');
                     if (proceed) {
-                              const url = `http://localhost:5000/user/${id}`;
+                              const url = `https://fierce-ocean-49278.herokuapp.com/user/${id}`;
                               fetch(url, {
                                         method: 'DELETE'
                               })

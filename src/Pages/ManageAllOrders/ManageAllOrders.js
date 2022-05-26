@@ -4,7 +4,7 @@ const ManageAllOrders = () => {
 
           const [loadorders, setLoadorders] = useState([]);
           useEffect(() => {
-                    fetch(`http://localhost:5000/purchased`, {
+                    fetch(`https://fierce-ocean-49278.herokuapp.com/purchaseall`, {
                               method: 'GET',
                               headers: {
                                         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
                     const proceed = window.confirm('Are you sure to detele the product?');
                     if (proceed) {
                               console.log(id);
-                              const url = `http://localhost:5000/purchased/${id}`;
+                              const url = `https://fierce-ocean-49278.herokuapp.com/purchaseall/${id}`;
                               fetch(url, {
                                         method: 'DELETE'
                               })

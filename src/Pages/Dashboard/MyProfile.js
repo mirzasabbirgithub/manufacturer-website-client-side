@@ -10,7 +10,7 @@ const MyProfile = () => {
           // const [updateProfile, setUpdateprofile] = useState({})
           // const { id } = useParams();
           // useEffect(() => {
-          //           fetch(`http://localhost:5000/myprofile/${id}`, {
+          //           fetch(`https://fierce-ocean-49278.herokuapp.com/myprofile/${id}`, {
           //                     method: 'GET',
           //           })
           //                     .then(res => res.json())
@@ -37,7 +37,7 @@ const MyProfile = () => {
                               linkedin: linkedin,
                     }
 
-                    // fetch(`http://localhost:5000/myprofile/${id}`, {
+                    // fetch(`https://fierce-ocean-49278.herokuapp.com/myprofile/${id}`, {
                     //           method: 'PUT',
                     //           headers: {
                     //                     'content-type': 'application/json'

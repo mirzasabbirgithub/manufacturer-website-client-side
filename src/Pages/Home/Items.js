@@ -6,7 +6,7 @@ const Items = () => {
           const [purchased, setPurchased] = useState();
 
           useEffect(() => {
-                    fetch('http://localhost:5000/item')
+                    fetch('https://fierce-ocean-49278.herokuapp.com/item')
                               .then(res => res.json())
                               .then(data => setItems(data));
           }, [])

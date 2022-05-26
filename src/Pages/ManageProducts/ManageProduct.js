@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const ManageProduct = () => {
           const [loaditem, setLoaditem] = useState([]);
           useEffect(() => {
-                    fetch(`http://localhost:5000/item`, {
+                    fetch(`https://fierce-ocean-49278.herokuapp.com/item`, {
                               method: 'GET',
                               headers: {
                                         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -20,7 +20,7 @@ const ManageProduct = () => {
                     const proceed = window.confirm('Are you sure to detele the product?');
                     if (proceed) {
                               console.log(id);
-                              const url = `http://localhost:5000/item/${id}`;
+                              const url = `https://fierce-ocean-49278.herokuapp.com/item/${id}`;
                               fetch(url, {
                                         method: 'DELETE'
                               })
